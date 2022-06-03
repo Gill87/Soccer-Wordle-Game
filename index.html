@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Footballer Wordle</title>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Daily Football Player Guessing Game, come find today's mystery player! It's the new Wordle for football (soccer) fans! 
+    Guess players from their FIFA ratings and many more characteristics!">
+    
+    <script src="main.js"></script>
+    <script src="names.js"></script>
+    <script src="nationality.js"></script>
+    <script src="league.js"></script>
+    <script src="rating.js"></script>
+    <script src="position.js"></script>
+    <script src="teams.js"></script>
+
+    <link rel="stylesheet" href="styles.css"/>
+
+</head>
+
+<body>
+    <div id="container">
+        <div id="heading">
+            <h1 class="center">Footballer Wordle</h1>
+            <h2 class="center">Football Player Guessing Game</h2>
+        </div>
+        <div class="center" id="textBar">
+            <input type ="text" placeholder="Guess 1 of 8" id="txtGuess">
+            <button id="infoButton" onclick="rulesPopup()">
+                <img id = "infoimg" src="images/220_F_198708370_GOOeRcvrCX2iAiQQNiYeSvLZeX4exJJ3.jpg" alt="Information Button">
+            </button>
+            <div id="box">
+                <button onclick="input(document.getElementById('option1'))" id="option1"></button>
+                <button onclick="input(document.getElementById('option2'))" id="option2"></button>
+                <button onclick="input(document.getElementById('option3'))" id="option3"></button>
+                <button onclick="input(document.getElementById('option4'))" id="option4"></button>
+            </div>
+        </div>
+
+        <br>
+    
+        <div class = "center">
+            <button onclick="clicked()" id="textButton">Guess</button>
+        </div>
+
+        <br>
+
+        <script> 
+            document.getElementById("txtGuess").addEventListener('keyup', filterList);
+        </script>
+
+        <body onload="loadData()"></body>
+
+        <table border="1" id="mainTable" class = "tableSection">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Nat.</th>
+                    <th>League</th>
+                    <th>Team</th>
+                    <th>Pos.</th>
+                    <th>FIFA 22 Rating</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+
+    <div class = "LowerBody"> 
+
+        <img src="images/ME-4024-Sports-Ball-Soccer-2__10658.webp" alt="Soccer Ball Photo">
+
+    </div>
+
+    <div class = "popup" id="popup1">
+        <div class="overlay"></div>
+        <div class = "content">
+            <div class="closebutton" onclick = "togglePopup()">&times;</div>
+            <h1 class="message" id = "header1"></h1>
+            <p class = "paragraph" id="para"></p>
+            <img src="images/salah-12272021-ftr-getty.jpg" alt="Mohamed Salah" id="player">
+            <p class="center">Next Mystery Player In</p>
+            <h3 id="time"></h3>
+        </div>
+    </div>
+
+    <div class = "popup" id="popup2">
+        <div class="overlay"></div>
+        <div class = "content2">
+            <div class="closebutton" onclick = "rulesPopup()">&times;</div>
+            <h1 class="message" id = "header2"></h1>
+            <p class = "paragraph" id="para2"></p>
+        </div>
+    </div>
+
+</body>
+
+<footer>
+    <br>
+    <h1 id="myExpertise">Made by Guritfak Gill</h1>
+    <h2 id="inspirations">Inspired by Wordle</h2>
+    <h2 id="inspirations">Inspired by Poeltl</h2>
+    <h2 id="inspirations">Inspired by Who Are Ya</h2>
+    <br>
+</footer>
+
+</html>
