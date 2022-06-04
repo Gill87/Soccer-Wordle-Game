@@ -1,0 +1,310 @@
+img {
+    width: 275px;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.username {
+    font-weight: bold;
+}
+
+body {
+    background-color:#222;
+}
+
+h1 {
+    font-size: 40px;
+    color: white;
+}
+
+h2{
+    color: white;
+}
+
+.message {
+    color: black;
+}
+
+.center{
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#container {
+    background-color: darkgreen;
+    width: auto;
+    height: auto;
+}
+
+table {
+    background-color: white;
+    border-collapse: collapse;
+    margin: 25px;
+    font-size: 0.9em;
+    margin-left: auto;
+    margin-right: auto;
+    border-color: #222;
+    border-width: 5px;
+}
+
+thread tr {
+    background-color: #009879;
+    color: white;
+    text-align: left;
+}
+
+th, td {
+    padding: 12px 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+tbody tr{
+    border-bottom: 1px solid #009879;
+}
+
+#textButton {
+    background-color: white;
+    color: black;
+    width: auto;
+    height: 30px;
+    border-radius: 5px;
+    display: inline-block;
+    font-weight:bold;
+    font-size: large;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.LowerBody {
+    width: auto;
+    height: auto;
+    background-color: darkgreen;
+}
+
+.popup .overlay{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    display: none; 
+} 
+
+#player {
+    display: none;
+    margin-right: auto;
+    margin-left: auto;
+    width: 150px;
+    height: 150px;
+}
+
+.popup .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: #fff;
+    width: 450px;
+    height: 400px;
+    z-index: 2;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#header2 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.popup .content2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: #fff;
+    width: 450px;
+    height: 300px;
+    z-index: 2;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+
+.popup .closebutton {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 30px;
+    height: 30px;
+    background: #222;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.popup.active .overlay {
+    display: block;
+}
+
+.popup.active .content {
+    transition: all 300ms ease-in-out;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.popup.active .content2 {
+    transition: all 300ms ease-in-out;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+input {
+    height: 50px;
+    width: auto;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding: 0 60px 0 20px;
+    font-size: 18px;
+    box-shadow: 0px 1px 5px rgba(0,0,0,0.1);
+}
+
+#box button {
+    background-color: white; /* Green background */
+    border: 1px solid gray; /* Green border */
+    color: black; /* White text */
+    padding: 5px 4px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    width: 200px; /* Set a width if needed */
+    display: block; /* Make the buttons appear below each other */
+    margin-right: auto;
+    margin-left: auto;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 15px;
+}
+
+#box {
+    display: none;
+}
+
+#box button:hover {
+    background-color: lightgray;
+}
+
+#myExpertise {
+    color: white;
+    text-align: center;
+    margin-left: auto;
+    font-size: medium;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#inspirations {
+    color: white;
+    text-align: center;
+    margin-left: auto;
+    font-size: smaller;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: lighter;
+}
+
+#textButton:disabled{
+    background-color: lightgrey;
+}
+
+footer {
+    background-color: #222;
+}
+
+#infoimg {
+    width: 20px;
+    height: 20px;
+}
+
+#infoButton {
+    width: 20px;
+    height: 20px;
+    background: none;
+    color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+}
+
+#time {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: darkgreen !important;
+    margin-top: 15px;
+}
+
+@media only screen and (max-width: 750px){
+    table {
+        font-size: 7.5px;
+    }
+
+    img {
+        width: 125px;
+    }
+
+    html {
+        background-color: darkGreen;
+    }
+
+    body {
+        background-color: darkgreen;
+    }
+
+    footer {
+        background-color: #222;
+    }
+
+    th, td {
+        padding: 10px 10px;
+    }
+
+    input {
+        width: 175px;
+        padding: 0 60px 0 20px;
+        font-size: 16px;
+    }
+
+    .popup .content2 {
+        width: 300px;
+        height: 400px;
+    }
+
+    .popup .closebutton {
+        right: 10px;
+        top: 10px;
+    }
+
+    .popup .content {
+        width: 300px;
+        height: 400px;
+    }
+
+}
+
+@media only screen and (max-width: 296px){
+    #infoButton {
+        width: 5px;
+        height: 5px;
+    }
+}
+
+
+@media only screen and (max-width: 290px){
+    #infoButton {
+        display: none;
+    }
+}
