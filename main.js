@@ -316,7 +316,7 @@ function togglePopup(message1, message2){
 
         document.getElementById("time").innerHTML = hours + " : " + minutes + " : " + seconds;
 
-        if(distance < 0){
+        if(distance <= 1){
             localStorage.clear();
             window.location.reload();
         }
