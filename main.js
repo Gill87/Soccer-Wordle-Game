@@ -301,7 +301,7 @@ function togglePopup(message1, message2){
 
         let now = new Date().getTime();
         
-        if(now.getDate != yesterday.getDate()){            
+        if(now.getDate() != yesterday.getDate()){            
             localStorage.clear();
             window.location.reload();
             clearIntervel(x);
