@@ -428,6 +428,7 @@ function loadData(){
     else {
         i = localStorage.length - 2;
     }
+    
     if(localStorage.length == 0){
         guessCount = localStorage.length + 1;
     }
@@ -439,7 +440,7 @@ function loadData(){
             guessCount = localStorage.length - 2;
         }
         else {
-            guessCount = localStorage.length;
+            guessCount = localStorage.length - 1;
         }
     }
 
