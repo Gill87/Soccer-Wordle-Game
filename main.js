@@ -1,11 +1,18 @@
-// if(localStorage.getItem("result") != "new"){
-    let hiddenName = "Mohamed Salah";
-    let hiddenTeam = "Liverpool";
-    let hiddenNationality = "EGY";
-    let hiddenPosition = "RW";
-    let hiddenRating = 89;
-    let hiddenLeague = "Premier League";
-// }
+let hiddenName = "Mohamed Salah";
+let hiddenTeam = "Liverpool";
+let hiddenNationality = "EGY";
+let hiddenPosition = "RW";
+let hiddenRating = 89;
+let hiddenLeague = "Premier League";
+
+if(localStorage.getItem("Bool") == "true"){
+    hiddenName = "Jadon Sancho";
+    hiddenLeague = "Premier League";
+    hiddenPosition = "RM";
+    hiddenTeam = "Manchester United";
+    hiddenRating = 87;
+    hiddenNationality = "ENG";
+}
 
 let index = -1;
 let track = 0;
@@ -275,6 +282,11 @@ function displayingGuess(num){
 }
 
 function togglePopup(message1, message2){
+
+    if(localStorage.getItem("Bool") == "true"){
+        document.getElementById("player").src = "images/3337539-68231048-2560-1440.jpg";
+    }
+    
     document.getElementById("txtGuess").value = "";
     
     if(localStorage.getItem("result") == "won"){
@@ -293,20 +305,15 @@ function togglePopup(message1, message2){
     document.getElementById("player").style.display = "block";
 
     let x  = setInterval(function() {
-        let today = new Date();
-        let countdownDate = new Date(today);
-        countdownDate.setDate(countdownDate.getDate() + 1);
-        countdownDate.setHours(0, 0, 0);
-        let yesterday = countdownDate.getDate() - 1;
 
-        let now = new Date().getTime();
-        
-        if(now.getDate() != yesterday.getDate()){            
-            localStorage.clear();
-            window.location.reload();
-            clearIntervel(x);
+        let countdownDate = new Date("June 21, 2022 00:00:00");
+
+        if(localStorage.getItem("Bool") == "true"){
+            countdownDate = new Date("June 22, 2022, 00:00:00");
         }
-    
+
+        let now = new Date();
+
         let distance = countdownDate - now;
 
         let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -327,14 +334,15 @@ function togglePopup(message1, message2){
 
         document.getElementById("time").innerHTML = hours + " : " + minutes + " : " + seconds;
 
-        if(distance <= 1000){
+        if(distance <= 0){
             localStorage.clear();
+            localStorage.setItem("Bool", "true");
             window.location.reload();
-            clearIntervel(x);      
+            document.getElementById("player").src = "images/3337539-68231048-2560-1440.jpg";
+            console.log("Midnight");
          }
 
     }, 1000);
-
     
 }
 
@@ -412,24 +420,27 @@ function saveData(){
 }
 
 function loadData(){
-    // if(localStorage.getItem("result") == "new"){
-    //     hiddenName = "Jadon Sancho";
-    //     hiddenLeague = "Premier League";
-    //     hiddenPosition = "RM";
-    //     hiddenTeam = "Manchester United";
-    //     hiddenRating = 87;
-    //     hiddenNationality = "ENG";
-    // }
-
     length = localStorage.getItem("length");
 
-    i = localStorage.length - 2;
-
+    if(localStorage.getItem("Bool") == "true" || localStorage.getItem("Bool") == "false"){
+        i = localStorage.length - 3;
+    }
+    else {
+        i = localStorage.length - 2;
+    }
     if(localStorage.length == 0){
         guessCount = localStorage.length + 1;
     }
+    else if(localStorage.length == 1){
+        guessCount = localStorage.length;
+    }
     else {
-        guessCount = localStorage.length - 1;
+        if(localStorage.getItem("Bool") == "true"){
+            guessCount = localStorage.length - 2;
+        }
+        else {
+            guessCount = localStorage.length;
+        }
     }
 
     if(i == 1){
