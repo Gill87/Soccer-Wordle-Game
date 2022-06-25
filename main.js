@@ -306,10 +306,10 @@ function togglePopup(message1, message2){
 
     let x  = setInterval(function() {
 
-        let countdownDate = new Date("June 21, 2022 00:00:00");
+        let countdownDate = new Date("June 26, 2022 00:00:00");
 
         if(localStorage.getItem("Bool") == "true"){
-            countdownDate = new Date("June 22, 2022, 00:00:00");
+            countdownDate = new Date("June 27, 2022, 00:00:00");
         }
 
         let now = new Date();
@@ -428,7 +428,7 @@ function loadData(){
     else {
         i = localStorage.length - 2;
     }
-    
+
     if(localStorage.length == 0){
         guessCount = localStorage.length + 1;
     }
@@ -538,4 +538,4 @@ function makeArrow(){
     }
 }
 
-// localStorage.clear();
+localStorage.clear();
