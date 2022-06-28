@@ -306,10 +306,10 @@ function togglePopup(message1, message2){
 
     let x  = setInterval(function() {
 
-        let countdownDate = new Date("June 26, 2022 00:00:00");
+        let countdownDate = new Date("June 28, 2022 00:00:00");
 
         if(localStorage.getItem("Bool") == "true"){
-            countdownDate = new Date("June 27, 2022, 00:00:00");
+            countdownDate = new Date("June 29, 2022, 00:00:00");
         }
 
         let now = new Date();
