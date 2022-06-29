@@ -282,7 +282,6 @@ function displayingGuess(num){
 }
 
 function togglePopup(message1, message2){
-
     if(localStorage.getItem("Bool") == "true"){
         document.getElementById("player").src = "images/3337539-68231048-2560-1440.jpg";
     }
@@ -306,10 +305,10 @@ function togglePopup(message1, message2){
 
     let x  = setInterval(function() {
 
-        let countdownDate = new Date("June 28, 2022 00:00:00");
+        let countdownDate = new Date("June 30, 2022 00:00:00");
 
         if(localStorage.getItem("Bool") == "true"){
-            countdownDate = new Date("June 29, 2022, 00:00:00");
+            countdownDate = new Date("July 1, 2022, 00:00:00");
         }
 
         let now = new Date();
@@ -344,6 +343,13 @@ function togglePopup(message1, message2){
 
     }, 1000);
     
+}
+
+function change(){
+    localStorage.clear();
+    localStorage.setItem("Bool", "true");
+    document.getElementById("player").src = "images/3337539-68231048-2560-1440.jpg";
+    console.log("Midnight");
 }
 
 function rulesPopup(){
@@ -420,6 +426,12 @@ function saveData(){
 }
 
 function loadData(){
+    let now = new Date();
+    let tomorrow = new Date("June 30, 2022 00:00:00");
+    if(now.getDate() == tomorrow.getDate()){
+        change();
+    }
+
     length = localStorage.getItem("length");
 
     if(localStorage.getItem("Bool") == "true" || localStorage.getItem("Bool") == "false"){
