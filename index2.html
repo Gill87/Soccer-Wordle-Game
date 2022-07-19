@@ -1,0 +1,133 @@
+<!DOCTYPE html style="background-image: url(images/jason-dent-QSIq9ncQkzY-unsplash)">
+<html lang="en">
+
+<head>
+
+    <title>Footballer Wordle</title>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Daily Football Player Guessing Game, come find today's mystery player! It's the new Wordle for football (soccer) fans! 
+    Guess the footballer from their FIFA ratings and many more characteristics!">
+    
+    <script src="main2.js"></script>
+    <script src="names2.js"></script>
+    <script src="nationality2.js"></script>
+    <script src="rating2.js"></script>
+    <script src="position2.js"></script>
+    <script src="teams2.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css"/>
+
+    <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7908036969288256" -->
+     <!-- crossorigin="anonymous"></script> -->
+
+</head>
+
+<body style="background-image: url(images/jason-dent-QSIq9ncQkzY-unsplash\ \(1\).jpg);">
+    <div id="container">
+        <div id="btn-group">
+            <button id="All" onclick="choice1()">All</button>
+            <button id="Top" onclick="choice2()">Top 100</button>
+            <button id="Prem" onclick="choice3()">Premier League</button>
+            <button id="Challenge" onclick="challenge()">Challenge</button>
+            <h3 id="Score">Score: </h3>
+        </div>
+        <div id="heading">
+            <h1 class="center">Footballer Wordle</h1>
+            <h2 class="center">Football Player Guessing Game</h2>
+        </div>
+        <div class="center" id="textBar">
+            <input type ="text" placeholder="Guess 1 of 8" id="txtGuess">
+            <button id="infoButton" onclick="rulesPopup()">
+                <img id = "infoimg" src="images/220_F_198708370_GOOeRcvrCX2iAiQQNiYeSvLZeX4exJJ3.jpg" alt="Information Button">
+            </button>
+            <div id="box">
+                <button onclick="input(document.getElementById('option1'))" id="option1"></button>
+                <button onclick="input(document.getElementById('option2'))" id="option2"></button>
+                <button onclick="input(document.getElementById('option3'))" id="option3"></button>
+                <button onclick="input(document.getElementById('option4'))" id="option4"></button>
+            </div>
+        </div>
+
+        <br>
+    
+        <div class = "center">
+            <button onclick="clicked()" id="textButton">Guess</button>
+        </div>
+
+        <br>
+
+        <script> 
+            document.getElementById("txtGuess").addEventListener('keyup', filterList);
+        </script>
+
+        <body onload="loadData()"></body>
+
+        <table border="1" id="mainTable" class = "tableSection">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Nat.</th>
+                    <th>Team</th>
+                    <th>Pos.</th>
+                    <th>FIFA 22 Rating</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+
+    <div class = "LowerBody"> 
+
+        <img src="images/Premier-League-Logo.png" alt="Soccer Ball Photo">
+
+    </div>
+
+    <div class = "popup" id="popup1">
+        <div class="overlay"></div>
+        <div class = "content">
+            <div class="closebutton" onclick = "togglePopup()">&times;</div>
+            <h1 class="message" id = "header1"></h1>
+            <p class = "paragraph" id="para"></p>
+            <img src="images/salah-12272021-ftr-getty.jpg" alt="Player Photo" id="player" class="playerimg">
+            <p class="center">Next Mystery Player In</p>
+            <h3 id="time"></h3>
+        </div>
+    </div>
+
+    <div class = "popup" id="popup2">
+        <div class="overlay"></div>
+        <div class = "content2">
+            <div class="closebutton" onclick = "rulesPopup()">&times;</div>
+            <h1 class="message" id = "header2"></h1>
+            <p class = "paragraph" id="para2"></p>
+        </div>
+    </div>
+
+    <div class="popup" id="popup3">
+        <div class="overlay"></div>
+        <div class="content2">
+            <div class="closebutton" onclick="challenge()">&times;</div>
+            <h1 class= "message" id="header3"></h1>
+            <p class="paragraph" id="para3"></p>
+            <img class="small" src="images/depositphotos_53490315-stock-illustration-mission-impossible-red-rubber-stamp.jpg" alt="Challenge Image">
+        </div>
+    </div>
+
+</body>
+
+<footer>
+    <br>
+    <h1 id="myExpertise">Made by Guritfak Gill</h1>
+    <h2 id="inspirations">Inspired by Wordle</h2>
+    <h2 id="inspirations">Inspired by Poeltl</h2>
+    <h2 id="inspirations">Inspired by Who Are Ya</h2>
+    <br>
+</footer>
+
+</html>
