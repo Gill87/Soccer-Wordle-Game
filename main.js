@@ -21,6 +21,7 @@ let arrow = "";
 
 let guessName;
 let guessCount = 0;
+let score = 0;
 
 let messageWon1 = "You Won!";
 let messageWon2 = "Correct, the player was indeed ";
@@ -37,6 +38,27 @@ let num = 0;
 let guesses = [];
 
 let length = 0;
+
+localStorage.setItem("Button", "All");
+
+function choice1(){
+    window.open("index.html", "_self");
+    localStorage.setItem("Button", "All");
+}
+function choice3(){
+    window.open("index2.html", "_self");
+    localStorage.setItem("Button", "Prem");
+}
+function choice2(){
+    window.open("index3.html", "_self");
+    localStorage.setItem("Button", "Top");
+}
+
+function challenge(){
+    document.getElementById("popup3").classList.toggle("active");
+    document.getElementById("header3").innerHTML = "Mission Impossible";
+    document.getElementById("para3").innerHTML = "Earn the Master Detective Badge by guessing all 3 daily players in less than or equal to a combined total of 7 guesses! Each player guessed is worth 10 points minus each guess you made. You need to score at least 23 points to earn the badge. Is this the impossible feat, maybe, let's see if you can make it possible!";
+}
 
 function filterList(){
     let touch1 = false;
@@ -161,12 +183,15 @@ function clicked(){
     }
     document.getElementById("option1").value = guessName;
 
-    if(guessCount == 0){
+    if(guessCount == 0 || guessCount == null){
         guessCount += 2;
     }
     else {
         ++guessCount;
     }
+
+    localStorage.setItem("GuessCount", guessCount);
+
 
     console.log("Count: " + guessCount);
 
@@ -212,6 +237,9 @@ function displayingGuess(num){
         }
         else if(localStorage.getItem("result") == "lost"){
             document.getElementById("txtGuess").setAttribute("placeholder", "Game Over!");
+        }
+        else if(guessCount == null){
+            guessCount = null;
         }
         else {
             document.getElementById("txtGuess").setAttribute("placeholder", "Guess " + (guessCount) + " of 8");
@@ -269,8 +297,18 @@ function displayingGuess(num){
     
     if(track == 6){
         --guessCount;
+        if(localStorage.getItem("result") != "won"){
+            score = localStorage.getItem("Score");
+            score = parseInt(localStorage.Score);    
+            score = score + 10 - (guessCount - 1);
+            localStorage.setItem("Score", score);
+            document.getElementById("Score").innerHTML = "Score: " + score;
+        }
         localStorage.setItem("result", "won");
         togglePopup(messageWon1, messageWon2);
+        if(score >= 23){
+            badge();
+        }
     }
     else {
         clear();
@@ -279,6 +317,12 @@ function displayingGuess(num){
     track = 0;
 
     index = -1;
+}
+
+function badge(){
+    document.getElementById("popup4").classList.toggle("active");
+    document.getElementById("header4").innerHTML = "Congratulations!";
+    document.getElementById("para4").innerHTML = "You have accomplished the impossible by scoring more than 22 points, well done!";
 }
 
 function togglePopup(message1, message2){
@@ -305,10 +349,10 @@ function togglePopup(message1, message2){
 
     let x  = setInterval(function() {
 
-        let countdownDate = new Date("June 30, 2022 00:00:00");
+        let countdownDate = new Date("July 20, 2022 00:00:00");
 
         if(localStorage.getItem("Bool") == "true"){
-            countdownDate = new Date("July 1, 2022, 00:00:00");
+            countdownDate = new Date("July 21, 2022, 00:00:00");
         }
 
         let now = new Date();
@@ -342,7 +386,6 @@ function togglePopup(message1, message2){
          }
 
     }, 1000);
-    
 }
 
 function change(){
@@ -426,35 +469,37 @@ function saveData(){
 }
 
 function loadData(){
+    if(localStorage.getItem("Button") == "All"){
+        document.getElementById("All").style.backgroundColor = "beige";
+    }
+    else if(localStorage.getItem("Button") == "Top"){
+        document.getElementById("All").style.backgroundColor = "beige";
+    }
+    else if(localStorage.getItem("Button") == "Prem"){
+        document.getElementById("All").style.backgroundColor = "beige";
+    }
+
     let now = new Date();
-    let tomorrow = new Date("June 30, 2022 00:00:00");
+    let tomorrow = new Date("July 20, 2022 00:00:00");
     if(now.getDate() == tomorrow.getDate()){
         change();
     }
 
+    if(localStorage.getItem("Bool") == "true"){
+        hiddenName = "Jadon Sancho";
+        hiddenLeague = "Premier League";
+        hiddenPosition = "RM";
+        hiddenTeam = "Manchester United";
+        hiddenRating = 87;
+        hiddenNationality = "ENG";
+    }
+
     length = localStorage.getItem("length");
 
-    if(localStorage.getItem("Bool") == "true" || localStorage.getItem("Bool") == "false"){
-        i = localStorage.length - 3;
-    }
-    else {
-        i = localStorage.length - 2;
-    }
+    guessCount = localStorage.getItem("GuessCount");
 
-    if(localStorage.length == 0){
-        guessCount = localStorage.length + 1;
-    }
-    else if(localStorage.length == 1){
-        guessCount = localStorage.length;
-    }
-    else {
-        if(localStorage.getItem("Bool") == "true"){
-            guessCount = localStorage.length - 2;
-        }
-        else {
-            guessCount = localStorage.length - 1;
-        }
-    }
+    i = guessCount;
+
 
     if(i == 1){
         guesses.push(localStorage.getItem("name1"));
@@ -525,6 +570,12 @@ function loadData(){
     }
 
     console.log("Count(): " + guessCount);
+
+    if(localStorage.getItem("Score") == null){
+        localStorage.setItem("Score", 0);
+    }
+    
+    document.getElementById("Score").innerHTML = "Score: " + localStorage.getItem("Score");
 }
 
 function check(name){
