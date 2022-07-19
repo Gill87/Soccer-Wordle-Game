@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html style="background-image: url(images/jason-dent-QSIq9ncQkzY-unsplash)">
 <html lang="en">
 
 <head>
@@ -24,14 +24,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="styles.css"/>
-    
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7908036969288256"
-     crossorigin="anonymous"></script>
+
+    <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7908036969288256" -->
+     <!-- crossorigin="anonymous"></script> -->
 
 </head>
 
-<body>
+<body style="background-image: url(images/jason-dent-QSIq9ncQkzY-unsplash\ \(1\).jpg);">
     <div id="container">
+        <div id="btn-group">
+            <button id="All" onclick="choice1()">All</button>
+            <button id="Top" onclick="choice2()">Top 100</button>
+            <button id="Prem" onclick="choice3()">Premier League</button>
+            <button id="Challenge" onclick="challenge()">Challenge</button>
+            <!-- <button>LaLiga</button>
+            <button>Ligue 1</button>
+            <button>Bundesliga</button>
+            <button>Serie A</button> -->
+            <h3 id="Score">Score: 0</h3>
+        </div>
         <div id="heading">
             <h1 class="center">Footballer Wordle</h1>
             <h2 class="center">Football Player Guessing Game</h2>
@@ -79,7 +90,7 @@
 
     <div class = "LowerBody"> 
 
-        <img src="images/ME-4024-Sports-Ball-Soccer-2__10658.webp" alt="Soccer Ball Photo">
+        <img src="images/ElClasico-Logo.png" alt="Soccer Ball Photo">
 
     </div>
 
@@ -101,6 +112,26 @@
             <div class="closebutton" onclick = "rulesPopup()">&times;</div>
             <h1 class="message" id = "header2"></h1>
             <p class = "paragraph" id="para2"></p>
+        </div>
+    </div>
+
+    <div class="popup" id="popup3">
+        <div class="overlay"></div>
+        <div class="content2">
+            <div class="closebutton" onclick="challenge()">&times;</div>
+            <h1 class= "message" id="header3"></h1>
+            <p class="paragraph" id="para3"></p>
+            <img class="small" src="images/depositphotos_53490315-stock-illustration-mission-impossible-red-rubber-stamp.jpg" alt="Challenge Image">
+        </div>
+    </div>
+
+    <div class="popup" id="popup4">
+        <div class="overlay"></div>
+        <div class="content">
+            <div class="closebutton" onclick="badge()">&times;</div>
+            <h1 class= "message" id="header4"></h1>
+            <p class="paragraph" id="para4"></p>
+            <img id="msBadge" src="images/Master.png" alt="">
         </div>
     </div>
 
