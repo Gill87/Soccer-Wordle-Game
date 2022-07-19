@@ -1,17 +1,32 @@
 img {
-    width: 275px;
+    width: 400px;
     border-radius: 10px;
     margin-left: auto;
     margin-right: auto;
     display: block;
+    
+}
+
+.small {
+    width: 80px;
+}
+
+#Score {
+    color: beige;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    float: right;
+    margin-top: auto;
 }
 
 .username {
     font-weight: bold;
 }
 
+#msBadge {
+    width: 225px;
+}
 body {
-    background-color:#222;
+    background-image: url(images/jason-dent-QSIq9ncQkzY-unsplash\ \(1\).jpg);
 }
 
 h1 {
@@ -32,8 +47,36 @@ h2{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+#btn-group button {
+    cursor: pointer;
+    border: 1.5px white;
+    color: black;
+    background-color: green;
+    float: left;
+    padding: 10px 15px;
+}
+
+#btn-group button:not(:last-child) {
+    border-right: none;
+}
+
+#btn-group:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+#btn-group button:hover {
+    background-color: lightgreen !important;
+  }
+
+#Challenge {
+    background-color: darkblue !important;
+    color: white !important;
+}
+
 #container {
-    background-color: darkgreen;
+    /* background-color: darkgreen; */
     width: auto;
     height: auto;
 }
@@ -80,7 +123,7 @@ tbody tr{
 .LowerBody {
     width: auto;
     height: auto;
-    background-color: darkgreen;
+    /* background-color: darkgreen; */
 }
 
 .popup .overlay{
@@ -140,6 +183,10 @@ tbody tr{
     font-family: 'Permanent Marker', cursive;
 }
 
+#header3 {
+    font-family: 'Permanent Marker', cursive;
+}
+
 .popup .closebutton {
     position: absolute;
     right: 20px;
@@ -169,6 +216,7 @@ tbody tr{
     transition: all 300ms ease-in-out;
     transform: translate(-50%, -50%) scale(1);
 }
+
 
 input {
     height: 50px;
@@ -225,7 +273,7 @@ input {
 }
 
 footer {
-    background-color: #222;
+    background-color: #222 !important;
 }
 
 #infoimg {
@@ -259,15 +307,11 @@ footer {
     }
 
     html {
-        background-color: darkGreen;
-    }
-
-    body {
-        background-color: darkgreen;
+        background-image: url(images/jason-dent-QSIq9ncQkzY-unsplash\ \(1\).jpg);
     }
 
     footer {
-        background-color: #222;
+        background-color: #222 !important;
     }
 
     th, td {
