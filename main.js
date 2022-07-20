@@ -469,15 +469,7 @@ function saveData(){
 }
 
 function loadData(){
-    if(localStorage.getItem("Button") == "All"){
-        document.getElementById("All").style.backgroundColor = "beige";
-    }
-    else if(localStorage.getItem("Button") == "Top"){
-        document.getElementById("All").style.backgroundColor = "beige";
-    }
-    else if(localStorage.getItem("Button") == "Prem"){
-        document.getElementById("All").style.backgroundColor = "beige";
-    }
+    document.getElementById("All").style.backgroundColor = "beige";
 
     let now = new Date();
     let tomorrow = new Date("July 20, 2022 00:00:00");
@@ -601,4 +593,4 @@ function makeArrow(){
     }
 }
 
-localStorage.clear();
+// localStorage.clear();
