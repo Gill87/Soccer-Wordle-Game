@@ -1,17 +1,17 @@
-let hiddenName = "Mohamed Salah";
-let hiddenTeam = "Liverpool";
-let hiddenNationality = "EGY";
-let hiddenPosition = "RW";
-let hiddenRating = 89;
-let hiddenLeague = "Premier League";
+hiddenName = "Gianluigi Donnarumma";
+hiddenLeague = "Ligue 1 Uber Eats";
+hiddenPosition = "GK";
+hiddenTeam = "Paris Saint-Germain";
+hiddenRating = 89;
+hiddenNationality = "ITA";
 
 if(localStorage.getItem("Bool3") == "true"){
-    hiddenName = "Jadon Sancho";
-    hiddenLeague = "Premier League";
-    hiddenPosition = "RM";
-    hiddenTeam = "Manchester United";
-    hiddenRating = 87;
-    hiddenNationality = "ENG";
+    hiddenName = "Eden Hazard";
+    hiddenLeague = "LaLiga Santander";
+    hiddenPosition = "LW";
+    hiddenTeam = "Real Madrid";
+    hiddenRating = 85;
+    hiddenNationality = "BEL";
 }
 
 let index = -1;
@@ -304,6 +304,9 @@ function displayingGuess(num){
         }
         localStorage.setItem("result3", "won");
         togglePopup(messageWon1, messageWon2);
+        if(score >= 23){
+            badge();
+        }
     }
     else {
         clear();
@@ -314,9 +317,15 @@ function displayingGuess(num){
     index = -1;
 }
 
+function badge(){
+    document.getElementById("popup4").classList.toggle("active");
+    document.getElementById("header4").innerHTML = "Congratulations!";
+    document.getElementById("para4").innerHTML = "You have earned the Master Detective badge by accomplishing the impossible by scoring more than 22 points, well done!";
+}
+
 function togglePopup(message1, message2){
     if(localStorage.getItem("Bool3") == "true"){
-        document.getElementById("player").src = "images/3337539-68231048-2560-1440.jpg";
+        document.getElementById("player").src = "images/Eden_Hazard_at_Baku_before_2019_UEFA_Europe_League_Final.jpg";
     }
     
     document.getElementById("txtGuess").value = "";
@@ -338,10 +347,10 @@ function togglePopup(message1, message2){
 
     let x  = setInterval(function() {
 
-        let countdownDate = new Date("July 20, 2022 00:00:00");
+        let countdownDate = new Date("July 21, 2022 00:00:00");
 
         if(localStorage.getItem("Bool3") == "true"){
-            countdownDate = new Date("July 21, 2022, 00:00:00");
+            countdownDate = new Date("July 22, 2022, 00:00:00");
         }
 
         let now = new Date();
@@ -370,19 +379,12 @@ function togglePopup(message1, message2){
             localStorage.clear();
             localStorage.setItem("Bool3", "true");
             window.location.reload();
-            document.getElementById("player").src = "images/3337539-68231048-2560-1440.jpg";
+            document.getElementById("player").src ="images/Eden_Hazard_at_Baku_before_2019_UEFA_Europe_League_Final.jpg";
             console.log("Midnight");
          }
 
     }, 1000);
     
-}
-
-function change(){
-    localStorage.clear();
-    localStorage.setItem("Bool3", "true");
-    document.getElementById("player").src = "images/3337539-68231048-2560-1440.jpg";
-    console.log("Midnight");
 }
 
 function rulesPopup(){
@@ -463,18 +465,15 @@ function loadData(){
     document.getElementById("Top").style.backgroundColor = "beige";
 
     let now = new Date();
-    let tomorrow = new Date("July 20, 2022 00:00:00");
-    if(now.getDate() == tomorrow.getDate()){
-        change();
-    }
+    let tomorrow = new Date("July 21, 2022 00:00:00");
 
     if(localStorage.getItem("Bool3") == "true"){
-        hiddenName = "Jadon Sancho";
-        hiddenLeague = "Premier League";
-        hiddenPosition = "RM";
-        hiddenTeam = "Manchester United";
-        hiddenRating = 87;
-        hiddenNationality = "ENG";
+        hiddenName = "Eden Hazard";
+        hiddenLeague = "LaLiga Santander";
+        hiddenPosition = "LW";
+        hiddenTeam = "Real Madrid";
+        hiddenRating = 85;
+        hiddenNationality = "BEL";
     }
 
     length = localStorage.getItem("length");
@@ -583,5 +582,3 @@ function makeArrow(){
         arrow = "  ↓";
     }
 }
-
-// localStorage.clear();
