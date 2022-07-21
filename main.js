@@ -477,9 +477,9 @@ function loadData(){
     let now = new Date();
     let tomorrow = new Date("July 21, 2022 00:00:00");
 
-    if(now.getDate() == tomorrow.getDate() && localStorage.getItem("Bool2") != "true"){
-        change();
-    }
+//     if(now.getDate() == tomorrow.getDate() && localStorage.getItem("Bool2") != "true"){
+//         change();
+//     }
 
     if(localStorage.getItem("Bool") == "true"){
         hiddenName = "Jadon Sancho";
