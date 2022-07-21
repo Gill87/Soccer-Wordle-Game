@@ -322,7 +322,7 @@ function displayingGuess(num){
 function badge(){
     document.getElementById("popup4").classList.toggle("active");
     document.getElementById("header4").innerHTML = "Congratulations!";
-    document.getElementById("para4").innerHTML = "You have accomplished the impossible by scoring more than 22 points, well done!";
+    document.getElementById("para4").innerHTML = "You have earned the Master Detective badge by accomplishing the impossible by scoring more than 22 points, well done!";
 }
 
 function togglePopup(message1, message2){
@@ -349,10 +349,10 @@ function togglePopup(message1, message2){
 
     let x  = setInterval(function() {
 
-        let countdownDate = new Date("July 20, 2022 00:00:00");
+        let countdownDate = new Date("July 21, 2022 00:00:00");
 
         if(localStorage.getItem("Bool") == "true"){
-            countdownDate = new Date("July 21, 2022, 00:00:00");
+            countdownDate = new Date("July 22, 2022, 00:00:00");
         }
 
         let now = new Date();
@@ -391,6 +391,9 @@ function togglePopup(message1, message2){
 function change(){
     localStorage.clear();
     localStorage.setItem("Bool", "true");
+    localStorage.setItem("Bool2", "true");
+    localStorage.setItem("Bool3", "true");
+
     document.getElementById("player").src = "images/3337539-68231048-2560-1440.jpg";
     console.log("Midnight");
 }
@@ -472,8 +475,9 @@ function loadData(){
     document.getElementById("All").style.backgroundColor = "beige";
 
     let now = new Date();
-    let tomorrow = new Date("July 20, 2022 00:00:00");
-    if(now.getDate() == tomorrow.getDate()){
+    let tomorrow = new Date("July 21, 2022 00:00:00");
+
+    if(now.getDate() == tomorrow.getDate() && localStorage.getItem("Bool2") != "true"){
         change();
     }
 
@@ -490,8 +494,9 @@ function loadData(){
 
     guessCount = localStorage.getItem("GuessCount");
 
-    i = guessCount;
+    i = guessCount - 1;
 
+    console.log("Count(): " + guessCount);
 
     if(i == 1){
         guesses.push(localStorage.getItem("name1"));
@@ -561,8 +566,6 @@ function loadData(){
         document.getElementById("txtGuess").setAttribute("placeholder", "Game Over!");
     }
 
-    console.log("Count(): " + guessCount);
-
     if(localStorage.getItem("Score") == null){
         localStorage.setItem("Score", 0);
     }
@@ -593,4 +596,4 @@ function makeArrow(){
     }
 }
 
-// localStorage.clear();
+localStorage.clear();
