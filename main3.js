@@ -1,9 +1,9 @@
-hiddenName = "Gianluigi Donnarumma";
-hiddenLeague = "Ligue 1 Uber Eats";
-hiddenPosition = "GK";
-hiddenTeam = "Paris Saint-Germain";
-hiddenRating = 89;
-hiddenNationality = "ITA";
+hiddenName = "Kyle Walker";
+hiddenLeague = "Premier League";
+hiddenPosition = "RB";
+hiddenTeam = "Manchester City";
+hiddenRating = 85;
+hiddenNationality = "ENG";
 
 if(localStorage.getItem("Bool3") == "true"){
     hiddenName = "Eden Hazard";
@@ -347,10 +347,10 @@ function togglePopup(message1, message2){
 
     let x  = setInterval(function() {
 
-        let countdownDate = new Date("July 21, 2022 00:00:00");
+        let countdownDate = new Date("July 23, 2022 00:00:00");
 
         if(localStorage.getItem("Bool3") == "true"){
-            countdownDate = new Date("July 22, 2022, 00:00:00");
+            countdownDate = new Date("July 24, 2022, 00:00:00");
         }
 
         let now = new Date();
