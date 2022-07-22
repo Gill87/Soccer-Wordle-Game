@@ -1,9 +1,9 @@
-let hiddenName = "Mohamed Salah";
-let hiddenTeam = "Liverpool";
-let hiddenNationality = "EGY";
-let hiddenPosition = "RW";
-let hiddenRating = 89;
-let hiddenLeague = "Premier League";
+let hiddenName = "Sergio Ramos";
+let hiddenTeam = "Paris Saint-Germain";
+let hiddenNationality = "ESP";
+let hiddenPosition = "CB";
+let hiddenRating = 88;
+let hiddenLeague = "Ligue 1 Uber Eats";
 
 if(localStorage.getItem("Bool") == "true"){
     hiddenName = "Jadon Sancho";
@@ -349,10 +349,10 @@ function togglePopup(message1, message2){
 
     let x  = setInterval(function() {
 
-        let countdownDate = new Date("July 21, 2022 00:00:00");
+        let countdownDate = new Date("July 23, 2022 00:00:00");
 
         if(localStorage.getItem("Bool") == "true"){
-            countdownDate = new Date("July 22, 2022, 00:00:00");
+            countdownDate = new Date("July 24, 2022, 00:00:00");
         }
 
         let now = new Date();
@@ -596,4 +596,4 @@ function makeArrow(){
     }
 }
 
-// localStorage.clear();
+localStorage.clear();
