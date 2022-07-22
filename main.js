@@ -494,7 +494,7 @@ function loadData(){
 
     guessCount = localStorage.getItem("GuessCount");
 
-    i = guessCount;
+    i = guessCount - 1;
 
     console.log("Count(): " + guessCount);
 
