@@ -1,8 +1,8 @@
-let hiddenName = "Heung Min Son";
-let hiddenTeam = "Tottenham Hotspur";
-let hiddenNationality = "KOR";
-let hiddenPosition = "LM";
-let hiddenRating = 89;
+let hiddenName = "Andrew Robertson";
+let hiddenTeam = "Liverpool";
+let hiddenNationality = "SCO";
+let hiddenPosition = "LB";
+let hiddenRating = 87;
 
 if(localStorage.getItem("Bool2") == "true"){
     hiddenName = "Trent Alexander-Arnold";
@@ -337,10 +337,10 @@ function togglePopup(message1, message2){
 
     let x  = setInterval(function() {
 
-        let countdownDate = new Date("July 21, 2022 00:00:00");
+        let countdownDate = new Date("July 23, 2022 00:00:00");
 
         if(localStorage.getItem("Bool2") == "true"){
-            countdownDate = new Date("July 22, 2022, 00:00:00");
+            countdownDate = new Date("July 24, 2022, 00:00:00");
         }
 
         let now = new Date();
@@ -467,7 +467,6 @@ function loadData(){
     guessCount = localStorage.getItem("GuessCount2");
 
     i = guessCount;
-    console.log(guessCount);
 
     if(i == 1){
         guesses.push(localStorage.getItem("name1B"));
@@ -569,3 +568,4 @@ function makeArrow(){
         arrow = "  ↓";
     }
 }
+
