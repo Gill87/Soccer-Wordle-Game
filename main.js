@@ -349,10 +349,11 @@ function togglePopup(message1, message2){
 
     let x  = setInterval(function() {
 
-        let countdownDate = new Date("July 23, 2022 00:00:00");
+        let countdownDate = new Date("July 26, 2022 00:00:00");
 
         if(localStorage.getItem("Bool") == "true"){
-            countdownDate = new Date("July 24, 2022, 00:00:00");
+            countdownDate = new Date("July 27, 2022, 00:00:00");
+            localStorage.setItem("Bool",  "false");
         }
 
         let now = new Date();
@@ -475,7 +476,7 @@ function loadData(){
     document.getElementById("All").style.backgroundColor = "beige";
 
     let now = new Date();
-    let tomorrow = new Date("July 21, 2022 00:00:00");
+    let tomorrow = new Date("July 26, 2022 00:00:00");
 
     if(now.getDate() == tomorrow.getDate() && localStorage.getItem("Bool") != "true"){
         change();
@@ -596,4 +597,4 @@ function makeArrow(){
     }
 }
 
-// localStorage.clear();
+localStorage.clear();
