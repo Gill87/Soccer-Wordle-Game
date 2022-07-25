@@ -271,8 +271,8 @@ input {
 #textButton:disabled{
     background-color: lightgrey;
 }
-
-/* footer {
+/* 
+footer {
     background-color: #222 !important;
 } */
 
@@ -310,9 +310,18 @@ input {
         background-image: url(images/jason-dent-QSIq9ncQkzY-unsplash\ \(1\).jpg);
     }
 
-    footer {
+    ::-ms-input-placeholder { /* Microsoft Edge */
+        font-size: 12px;
+      }
+
+      ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+        font-size: 12px;
+        opacity: 1; /* Firefox */
+      }
+
+    /* footer {
         background-color: #222 !important;
-    }
+    } */
 
     th, td {
         padding: 10px 10px;
