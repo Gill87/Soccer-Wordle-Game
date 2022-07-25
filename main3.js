@@ -347,10 +347,11 @@ function togglePopup(message1, message2){
 
     let x  = setInterval(function() {
 
-        let countdownDate = new Date("July 23, 2022 00:00:00");
+        let countdownDate = new Date("July 26, 2022 00:00:00");
 
         if(localStorage.getItem("Bool3") == "true"){
-            countdownDate = new Date("July 24, 2022, 00:00:00");
+            countdownDate = new Date("July 27, 2022, 00:00:00");
+            localStorage.setItem("Bool3", "false");
         }
 
         let now = new Date();
@@ -465,7 +466,7 @@ function loadData(){
     document.getElementById("Top").style.backgroundColor = "beige";
 
     let now = new Date();
-    let tomorrow = new Date("July 21, 2022 00:00:00");
+    let tomorrow = new Date("July 26, 2022 00:00:00");
 
     if(localStorage.getItem("Bool3") == "true"){
         hiddenName = "Eden Hazard";
