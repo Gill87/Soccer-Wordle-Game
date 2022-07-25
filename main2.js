@@ -337,10 +337,11 @@ function togglePopup(message1, message2){
 
     let x  = setInterval(function() {
 
-        let countdownDate = new Date("July 23, 2022 00:00:00");
+        let countdownDate = new Date("July 26, 2022 00:00:00");
 
         if(localStorage.getItem("Bool2") == "true"){
-            countdownDate = new Date("July 24, 2022, 00:00:00");
+            countdownDate = new Date("July 27, 2022, 00:00:00");
+            localStorage.setItem("Bool2", "false");
         }
 
         let now = new Date();
@@ -452,7 +453,7 @@ function loadData(){
 
 
     let now = new Date();
-    let tomorrow = new Date("July 21, 2022 00:00:00");
+    let tomorrow = new Date("July 26, 2022 00:00:00");
 
     if(localStorage.getItem("Bool2") == "true"){
         hiddenName = "Trent Alexander-Arnold";
