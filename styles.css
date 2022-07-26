@@ -251,6 +251,16 @@ input {
     background-color: lightgray;
 }
 
+.green mark {
+    background-color: green;
+}
+
+#bullet {
+    text-align: left;
+    font-size: large;
+    padding: 5px;
+}
+
 #myExpertise {
     color: white;
     text-align: center;
