@@ -403,7 +403,6 @@ function rulesPopup(){
     document.getElementById("popup2").classList.toggle("active");
     
     document.getElementById("header2").innerHTML = "How to Play";
-    document.getElementById("para2").innerHTML = "Find the mystery player in 8 guesses to win the game. Start by guessing a random player and find out information about the mystery player. If a characteristic turns green, then that means the mystery player has the same characteristic. If it turns yellow, then the mystery player is close to this characteristic. If the block remains white, then the mystery player is not related to the characteristic. Now, get out there and find this mysterious player!";
 }
 
 function clear(){
@@ -473,6 +472,16 @@ function saveData(){
 }
 
 function loadData(){
+    if(localStorage.getItem("Score") == null){
+        localStorage.setItem("Score", 0);
+    }
+    
+    document.getElementById("Score").innerHTML = "Score: " + localStorage.getItem("Score");
+
+    if(localStorage.getItem("Score") == 0){
+        rulesPopup();
+    }
+    
     document.getElementById("All").style.backgroundColor = "beige";
 
     let now = new Date();
@@ -566,12 +575,6 @@ function loadData(){
         togglePopup(messageLost1, messageLost2);
         document.getElementById("txtGuess").setAttribute("placeholder", "Game Over!");
     }
-
-    if(localStorage.getItem("Score") == null){
-        localStorage.setItem("Score", 0);
-    }
-    
-    document.getElementById("Score").innerHTML = "Score: " + localStorage.getItem("Score");
 }
 
 function check(name){
