@@ -1,8 +1,8 @@
-let hiddenName = "Andrew Robertson";
-let hiddenTeam = "Liverpool";
-let hiddenNationality = "SCO";
-let hiddenPosition = "LB";
-let hiddenRating = 87;
+let hiddenName = "Jamie Vardy";
+let hiddenTeam = "Leicester City";
+let hiddenNationality = "ENG";
+let hiddenPosition = "ST";
+let hiddenRating = 86;
 
 if(localStorage.getItem("Bool2") == "true"){
     hiddenName = "Trent Alexander-Arnold";
@@ -337,11 +337,10 @@ function togglePopup(message1, message2){
 
     let x  = setInterval(function() {
 
-        let countdownDate = new Date("July 26, 2022 00:00:00");
+        let countdownDate = new Date("July 30, 2022 00:00:00");
 
         if(localStorage.getItem("Bool2") == "true"){
-            countdownDate = new Date("July 27, 2022, 00:00:00");
-            localStorage.setItem("Bool2", "false");
+            countdownDate = new Date("July 31, 2022, 00:00:00");
         }
 
         let now = new Date();
@@ -451,9 +450,8 @@ function saveData(){
 function loadData(){
     document.getElementById("Prem").style.backgroundColor = "beige";
 
-
     let now = new Date();
-    let tomorrow = new Date("July 26, 2022 00:00:00");
+    let tomorrow = new Date("July 30, 2022 00:00:00");
 
     if(localStorage.getItem("Bool2") == "true"){
         hiddenName = "Trent Alexander-Arnold";
