@@ -1,8 +1,8 @@
-hiddenName = "Kyle Walker";
+hiddenName = "Harry Kane";
 hiddenLeague = "Premier League";
-hiddenPosition = "RB";
-hiddenTeam = "Manchester City";
-hiddenRating = 85;
+hiddenPosition = "ST";
+hiddenTeam = "Tottenham Hotspur";
+hiddenRating = 90;
 hiddenNationality = "ENG";
 
 if(localStorage.getItem("Bool3") == "true"){
@@ -347,11 +347,10 @@ function togglePopup(message1, message2){
 
     let x  = setInterval(function() {
 
-        let countdownDate = new Date("July 26, 2022 00:00:00");
+        let countdownDate = new Date("July 30, 2022 00:00:00");
 
         if(localStorage.getItem("Bool3") == "true"){
-            countdownDate = new Date("July 27, 2022, 00:00:00");
-            localStorage.setItem("Bool3", "false");
+            countdownDate = new Date("July 31, 2022, 00:00:00");
         }
 
         let now = new Date();
@@ -382,6 +381,8 @@ function togglePopup(message1, message2){
             window.location.reload();
             document.getElementById("player").src ="images/Eden_Hazard_at_Baku_before_2019_UEFA_Europe_League_Final.jpg";
             console.log("Midnight");
+            score = 0;
+            localStorage.setItem("Score", 0);
          }
 
     }, 1000);
@@ -466,7 +467,7 @@ function loadData(){
     document.getElementById("Top").style.backgroundColor = "beige";
 
     let now = new Date();
-    let tomorrow = new Date("July 26, 2022 00:00:00");
+    let tomorrow = new Date("July 30, 2022 00:00:00");
 
     if(localStorage.getItem("Bool3") == "true"){
         hiddenName = "Eden Hazard";
