@@ -1,9 +1,9 @@
-let hiddenName = "Sergio Ramos";
-let hiddenTeam = "Paris Saint-Germain";
-let hiddenNationality = "ESP";
-let hiddenPosition = "CB";
-let hiddenRating = 88;
-let hiddenLeague = "Ligue 1 Uber Eats";
+let hiddenName = "Thomas Muller";
+let hiddenTeam = "FC Bayern München";
+let hiddenNationality = "GER";
+let hiddenPosition = "CAM";
+let hiddenRating = 87;
+let hiddenLeague = "Bundesliga";
 
 if(localStorage.getItem("Bool") == "true"){
     hiddenName = "Jadon Sancho";
@@ -13,6 +13,8 @@ if(localStorage.getItem("Bool") == "true"){
     hiddenRating = 87;
     hiddenNationality = "ENG";
 }
+
+let showCount = 0;
 
 let index = -1;
 let track = 0;
@@ -349,11 +351,10 @@ function togglePopup(message1, message2){
 
     let x  = setInterval(function() {
 
-        let countdownDate = new Date("July 26, 2022 00:00:00");
+        let countdownDate = new Date("July 30, 2022 00:00:00");
 
         if(localStorage.getItem("Bool") == "true"){
-            countdownDate = new Date("July 27, 2022, 00:00:00");
-            localStorage.setItem("Bool",  "false");
+            countdownDate = new Date("July 31, 2022, 00:00:00");
         }
 
         let now = new Date();
@@ -478,14 +479,15 @@ function loadData(){
     
     document.getElementById("Score").innerHTML = "Score: " + localStorage.getItem("Score");
 
-    if(localStorage.getItem("Score") == 0){
+    if(localStorage.getItem("Score") == 0 && showCount == 0){
         rulesPopup();
+        ++showCount;
     }
     
     document.getElementById("All").style.backgroundColor = "beige";
 
     let now = new Date();
-    let tomorrow = new Date("July 26, 2022 00:00:00");
+    let tomorrow = new Date("July 30, 2022 00:00:00");
 
     if(now.getDate() == tomorrow.getDate() && localStorage.getItem("Bool") != "true"){
         change();
@@ -600,4 +602,4 @@ function makeArrow(){
     }
 }
 
-// localStorage.clear();
+localStorage.clear();
