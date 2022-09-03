@@ -351,10 +351,12 @@ function togglePopup(message1, message2){
 
     let x  = setInterval(function() {
 
-        let countdownDate = new Date("July 30, 2022 00:00:00");
+        let countdownDate = new Date();
+        countdownDate.setHours(23, 59, 59);
 
         if(localStorage.getItem("Bool") == "true"){
-            countdownDate = new Date("July 31, 2022, 00:00:00");
+            countdownDate = new Date();
+            countdownDate.setHours(23, 59, 59);
         }
 
         let now = new Date();
@@ -395,6 +397,9 @@ function change(){
     localStorage.setItem("Bool", "true");
     localStorage.setItem("Bool2", "true");
     localStorage.setItem("Bool3", "true");
+
+    localStorage.setItem("Score", 0);
+    score = 0;
 
     document.getElementById("player").src = "images/3337539-68231048-2560-1440.jpg";
     console.log("Midnight");
@@ -479,19 +484,19 @@ function loadData(){
     
     document.getElementById("Score").innerHTML = "Score: " + localStorage.getItem("Score");
 
-    if(localStorage.getItem("Score") == 0 && showCount == 0){
+    if(localStorage.getItem("Score") == 0 && showCount < 1){
         rulesPopup();
         ++showCount;
     }
     
     document.getElementById("All").style.backgroundColor = "beige";
 
-    let now = new Date();
-    let tomorrow = new Date("July 30, 2022 00:00:00");
+    // let now = new Date();
+    // let tomorrow = new Date("August 2, 2022 00:00:00");
 
-    if(now.getDate() == tomorrow.getDate() && localStorage.getItem("Bool") != "true"){
-        change();
-    }
+    // if(now.getDate() == tomorrow.getDate() && localStorage.getItem("Bool") != "true"){
+    //     change();
+    // }
 
     if(localStorage.getItem("Bool") == "true"){
         hiddenName = "Jadon Sancho";
@@ -602,4 +607,4 @@ function makeArrow(){
     }
 }
 
-// localStorage.clear();
+localStorage.clear();
