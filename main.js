@@ -607,4 +607,4 @@ function makeArrow(){
     }
 }
 
-localStorage.clear();
+// localStorage.clear();
