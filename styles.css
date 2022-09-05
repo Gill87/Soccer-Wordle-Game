@@ -18,6 +18,10 @@ img {
     margin-top: auto;
 }
 
+#topHeader {
+    font-weight:lighter;
+}
+
 .username {
     font-weight: bold;
 }
@@ -118,12 +122,6 @@ tbody tr{
     font-size: large;
     cursor: pointer;
     margin-right: 20px;
-}
-
-.LowerBody {
-    width: auto;
-    height: auto;
-    /* background-color: darkgreen; */
 }
 
 .popup .overlay{
@@ -310,14 +308,11 @@ footer {
 @media only screen and (max-width: 750px){
     table {
         font-size: 7.5px;
+        zoom:180%;
     }
 
     img {
         width: 125px;
-    }
-
-    html {
-        background-image: url(images/jason-dent-QSIq9ncQkzY-unsplash\ \(1\).jpg);
     }
 
     ::-ms-input-placeholder { /* Microsoft Edge */
@@ -334,7 +329,7 @@ footer {
     } */
 
     th, td {
-        padding: 10px 10px;
+        padding: 5px 5px;
     }
 
     input {
