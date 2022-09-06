@@ -308,7 +308,6 @@ footer {
 @media only screen and (max-width: 750px){
     table {
         font-size: 7.5px;
-        zoom:180%;
     }
 
     img {
