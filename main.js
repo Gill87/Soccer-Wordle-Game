@@ -14,6 +14,16 @@ if(localStorage.getItem("Bool") == "true"){
     hiddenNationality = "ENG";
 }
 
+if(localStorage.getItem("Bool") == "false"){
+    let hiddenName = "Thomas Muller";
+    let hiddenTeam = "FC Bayern München";
+    let hiddenNationality = "GER";
+    let hiddenPosition = "CAM";
+    let hiddenRating = 87;
+    let hiddenLeague = "Bundesliga";
+    localStorage.setItem("tracker", "2");
+}
+
 let showCount = 0;
 
 let index = -1;
@@ -357,6 +367,7 @@ function togglePopup(message1, message2){
         if(localStorage.getItem("Bool") == "true"){
             countdownDate = new Date();
             countdownDate.setHours(23, 59, 59);
+            localStorage.setItem("tracker", "1");
         }
 
         let now = new Date();
@@ -382,11 +393,21 @@ function togglePopup(message1, message2){
         document.getElementById("time").innerHTML = hours + " : " + minutes + " : " + seconds;
 
         if(distance <= 0){
-            localStorage.clear();
-            localStorage.setItem("Bool", "true");
-            window.location.reload();
-            document.getElementById("player").src = "images/3337539-68231048-2560-1440.jpg";
-            console.log("Midnight");
+            if(localStorage.getItem("tracker") == "1"){
+                localStorage.clear();
+                localStorage.setItem("Bool", "false");
+                console.log("tracker working");
+                window.location.reload();
+                document.getElementById("player").src = "images/2018-fif-world-cup-thomas-mueller.jpg";
+
+            }
+            else {
+                localStorage.clear();
+                localStorage.setItem("Bool", "true");
+                window.location.reload();
+                document.getElementById("player").src = "images/3337539-68231048-2560-1440.jpg";
+                console.log("Midnight");
+            }
          }
 
     }, 1000);
@@ -607,4 +628,4 @@ function makeArrow(){
     }
 }
 
-// localStorage.clear();
+localStorage.clear();
