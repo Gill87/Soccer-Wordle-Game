@@ -13,7 +13,7 @@ img {
 
 #Score {
     color: beige;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Mulish';
     float: right;
     margin-top: auto;
 }
@@ -109,17 +109,24 @@ table {
     }
 }
 
+
 thread tr {
     background-color: #009879;
     color: white;
     text-align: left;
 }
 
-th, td {
+th{
     padding: 12px 15px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     animation: appear 2s;
+    font-family: 'Cabin';
+    font-weight: bold;
+}
 
+td {
+    padding: 12px 15px;
+    animation: appear 2s;
+    font-family: 'Raleway';
 }
 
 tbody tr{
