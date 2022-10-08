@@ -29,8 +29,9 @@ img {
 #msBadge {
     width: 225px;
 }
+
 body {
-    background-image: url(images/jason-dent-QSIq9ncQkzY-unsplash\ \(1\).jpg);
+    background-color: darkgreen
 }
 
 h1 {
@@ -58,6 +59,8 @@ h2{
     background-color: green;
     float: left;
     padding: 10px 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: large;
 }
 
 #btn-group button:not(:last-child) {
@@ -96,6 +99,16 @@ table {
     border-width: 5px;
 }
 
+@keyframes appear {
+    from {
+        opacity: 0%;
+    }
+
+    to {
+        opacity: 100%;
+    }
+}
+
 thread tr {
     background-color: #009879;
     color: white;
@@ -105,6 +118,8 @@ thread tr {
 th, td {
     padding: 12px 15px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    animation: appear 2s;
+
 }
 
 tbody tr{
@@ -307,7 +322,7 @@ footer {
 
 @media only screen and (max-width: 750px){
     table {
-        font-size: 12px;
+        font-size: 13px;
     }
 
     img {
