@@ -307,7 +307,7 @@ footer {
 
 @media only screen and (max-width: 750px){
     table {
-        font-size: 7.5px;
+        font-size: 12px;
     }
 
     img {
@@ -315,11 +315,11 @@ footer {
     }
 
     ::-ms-input-placeholder { /* Microsoft Edge */
-        font-size: 12px;
+        font-size: 14px;
       }
 
       ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-        font-size: 12px;
+        font-size: 14px;
         opacity: 1; /* Firefox */
       }
 
