@@ -237,6 +237,10 @@ tbody tr{
     transform: translate(-50%, -50%) scale(1);
 }
 
+.mobile {
+    display: none;
+}
+
 
 input {
     height: 50px;
@@ -328,6 +332,9 @@ footer {
 }
 
 @media only screen and (max-width: 750px){
+    #impossible {
+        display: none;
+    }
     table {
         font-size: 13px;
     }
@@ -374,18 +381,50 @@ footer {
         height: 425px;
     }
 
+    .mobile {
+        text-align: center;
+        display: block;
+        float: none !important;
+    }
+
+    .PC {
+        display: none;
+    }
+
 }
 
 @media only screen and (max-width: 296px){
+    #impossible {
+        display: none;
+    }
     #infoButton {
         width: 5px;
         height: 5px;
+    }
+    .PC {
+        display: none;
+    }
+    .mobile {
+        text-align: center;
+        display: block;
+        float: none !important;
     }
 }
 
 
 @media only screen and (max-width: 290px){
+    #impossible {
+        display: none;
+    }
     #infoButton {
         display: none;
+    }
+    .PC {
+        display: none;
+    }
+    .mobile {
+        text-align: center;
+        display: block;
+        float: none !important;
     }
 }
