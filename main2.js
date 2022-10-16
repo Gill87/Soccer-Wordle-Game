@@ -544,6 +544,7 @@ function loadData(){
     }
     
     document.getElementById("Score").innerHTML = "Score: " + localStorage.getItem("Score");
+    document.getElementById("Score2").innerHTML = "Score: " + localStorage.getItem("Score");
 
 }
 
@@ -569,4 +570,3 @@ function makeArrow(){
         arrow = "  ↓";
     }
 }
-
