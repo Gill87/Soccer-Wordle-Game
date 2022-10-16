@@ -562,6 +562,8 @@ function loadData(){
     }
     
     document.getElementById("Score").innerHTML = "Score: " + localStorage.getItem("Score");
+    document.getElementById("Score2").innerHTML = "Score: " + localStorage.getItem("Score");
+
 }
 
 function check(name){
@@ -585,4 +587,10 @@ function makeArrow(){
     else {
         arrow = "  ↓";
     }
+}
+
+
+function showImage(){
+    document.getElementById("popup5").classList.toggle("active");
+
 }
