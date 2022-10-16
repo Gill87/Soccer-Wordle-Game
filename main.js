@@ -245,7 +245,7 @@ function displayingGuess(num){
             --guessCount;
         }
         if(localStorage.getItem("result") == "won"){
-            document.getElementById("txtGuess").setAttribute("placeholder", "You solved it in " + (guessCount) + "!");
+            document.getElementById("txtGuess").setAttribute("placeholder", "Solved it in " + (guessCount) + "!");
         }
         else if(localStorage.getItem("result") == "lost"){
             document.getElementById("txtGuess").setAttribute("placeholder", "Game Over!");
@@ -315,6 +315,7 @@ function displayingGuess(num){
             score = score + 10 - (guessCount - 1);
             localStorage.setItem("Score", score);
             document.getElementById("Score").innerHTML = "Score: " + score;
+            document.getElementById("Score2").innerHTML = "Score: " + score;
         }
         localStorage.setItem("result", "won");
         togglePopup(messageWon1, messageWon2);
@@ -345,7 +346,7 @@ function togglePopup(message1, message2){
     document.getElementById("txtGuess").value = "";
     
     if(localStorage.getItem("result") == "won"){
-        document.getElementById("txtGuess").setAttribute("placeholder", "You solved it in " + (guessCount) + "!");
+        document.getElementById("txtGuess").setAttribute("placeholder", "Solved it in " + (guessCount) + "!");
     }
 
     document.getElementById("popup1").classList.toggle("active");
@@ -499,18 +500,20 @@ function saveData(){
 }
 
 function loadData(){
+    document.getElementById("All").style.backgroundColor = "beige";
+    
     if(localStorage.getItem("Score") == null){
         localStorage.setItem("Score", 0);
     }
     
     document.getElementById("Score").innerHTML = "Score: " + localStorage.getItem("Score");
+    document.getElementById("Score2").innerHTML = "Score: " + localStorage.getItem("Score");
 
     if(localStorage.getItem("Score") == 0 && showCount < 1){
         rulesPopup();
         ++showCount;
     }
     
-    document.getElementById("All").style.backgroundColor = "beige";
 
     // let now = new Date();
     // let tomorrow = new Date("August 2, 2022 00:00:00");
@@ -626,6 +629,11 @@ function makeArrow(){
     else {
         arrow = "  ↓";
     }
+}
+
+function showImage(){
+    document.getElementById("popup5").classList.toggle("active");
+
 }
 
 // localStorage.clear();
