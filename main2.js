@@ -570,3 +570,8 @@ function makeArrow(){
         arrow = "  ↓";
     }
 }
+
+function showImage(){
+    document.getElementById("popup5").classList.toggle("active");
+
+}
