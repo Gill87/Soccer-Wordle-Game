@@ -18,6 +18,24 @@ img {
     margin-top: auto;
 }
 
+#Score2 {
+    color: beige;
+    font-family: 'Mulish';
+    float: right;
+    margin-top: auto;
+}
+
+#imageButton {
+    background-color: transparent;
+    color:white;
+    text-decoration: underline;
+    border:none;
+    cursor: pointer;
+    font-size:20px;
+    margin-right: 20px;
+
+}
+
 #topHeader {
     font-weight:lighter;
 }
@@ -133,6 +151,19 @@ tbody tr{
     border-bottom: 1px solid #009879;
 }
 
+#blurredPlayer {
+    filter:blur(6px);
+    margin-right: auto;
+    margin-left: auto;
+    width: 150px;
+    height: 150px;
+}
+
+.imagePara {
+    color:black;
+    font-family: cursive;
+}
+
 #textButton {
     background-color: white;
     color: black;
@@ -143,7 +174,7 @@ tbody tr{
     font-weight:bold;
     font-size: large;
     cursor: pointer;
-    margin-right: 20px;
+    margin-right: 22px;
 }
 
 .popup .overlay{
