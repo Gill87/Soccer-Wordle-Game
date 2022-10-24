@@ -10,6 +10,9 @@ if(localStorage.getItem("Bool2") == "true"){
     hiddenTeam = "Liverpool";
     hiddenRating = 87;
     hiddenNationality = "ENG";
+
+    document.getElementById("blurredPlayer").src = "images/skysports-trent-alexander-arnold_5502269.jpg";
+
 }
 
 let index = -1;
@@ -452,8 +455,8 @@ function saveData(){
 function loadData(){
     document.getElementById("Prem").style.backgroundColor = "beige";
 
-    let now = new Date();
-    let tomorrow = new Date("August 2, 2022 00:00:00");
+    // let now = new Date();
+    // let tomorrow = new Date("August 2, 2022 00:00:00");
 
     if(localStorage.getItem("Bool2") == "true"){
         hiddenName = "Trent Alexander-Arnold";
