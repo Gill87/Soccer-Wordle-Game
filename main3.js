@@ -12,6 +12,8 @@ if(localStorage.getItem("Bool3") == "true"){
     hiddenTeam = "Real Madrid";
     hiddenRating = 85;
     hiddenNationality = "BEL";
+
+    document.getElementById("blurredPlayer").src = "images/Eden_Hazard_at_Baku_before_2019_UEFA_Europe_League_Final.jpg";
 }
 
 let index = -1;
@@ -468,8 +470,8 @@ function loadData(){
 
     document.getElementById("Top").style.backgroundColor = "beige";
 
-    let now = new Date();
-    let tomorrow = new Date("August 2, 2022 00:00:00");
+    // let now = new Date();
+    // let tomorrow = new Date("August 2, 2022 00:00:00");
 
     if(localStorage.getItem("Bool3") == "true"){
         hiddenName = "Eden Hazard";
