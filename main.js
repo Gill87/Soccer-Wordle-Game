@@ -12,6 +12,8 @@ if(localStorage.getItem("Bool") == "true"){
     hiddenTeam = "Manchester United";
     hiddenRating = 87;
     hiddenNationality = "ENG";
+
+    document.getElementById("blurredPlayer").src = "images/3337539-68231048-2560-1440.jpg";
 }
 
 if(localStorage.getItem("Bool") == "false"){
@@ -339,6 +341,7 @@ function badge(){
 }
 
 function togglePopup(message1, message2){
+    console.log("ll");
     if(localStorage.getItem("Bool") == "true"){
         document.getElementById("player").src = "images/3337539-68231048-2560-1440.jpg";
     }
