@@ -78,6 +78,9 @@
         <br>
     
         <div class = "center">
+            <button onclick="showImage()" id="imageButton">Show Image</button>
+            <br>
+            <br>
             <button onclick="clicked()" id="textButton">Guess</button>
         </div>
 
@@ -141,6 +144,17 @@
             <h1 class= "message" id="header4"></h1>
             <p class="paragraph" id="para4"></p>
             <img id="msBadge" src="images/Master.png" alt="Badge Photo">
+        </div>
+    </div>
+
+    
+    <div class = "popup" id="popup5">
+        <div class="overlay"></div>
+        <div class = "content">
+            <div class="closebutton" onclick = "showImage()">&times;</div>
+            <h1 class="imagePara">Who is this</h1>
+            <img src="images/Harry_Kane_in_Russia1.jpg" alt="Player Photo" id="blurredPlayer" class="playerimg">
+            <h1 class="imagePara">Mystery Player?</h1>
         </div>
     </div>
 
