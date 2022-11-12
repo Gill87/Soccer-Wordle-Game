@@ -352,7 +352,7 @@ function togglePopup(message1, message2){
         let countdownDate = new Date();
         countdownDate.setHours(23, 59, 59);
 
-        if(localStorage.getItem("Bool") == "true"){
+        if(localStorage.getItem("Bool3") == "true"){
             countdownDate = new Date();
             countdownDate.setHours(23, 59, 59);
         }
