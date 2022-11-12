@@ -627,4 +627,4 @@ function showImage(){
 
 }
 
-// localStorage.clear();
+localStorage.clear();
