@@ -154,8 +154,7 @@ function filterList(){
         document.getElementById("option4").style.display = 'none';
     } 
 
-
-
+    
     if(option1 == option2 || option1 == option3 || option1 == option4){
         document.getElementById("option1").style.display = 'none';
     }
@@ -341,7 +340,6 @@ function badge(){
 }
 
 function togglePopup(message1, message2){
-    console.log("ll");
     if(localStorage.getItem("Bool") == "true"){
         document.getElementById("player").src = "images/3337539-68231048-2560-1440.jpg";
     }
@@ -397,21 +395,11 @@ function togglePopup(message1, message2){
         document.getElementById("time").innerHTML = hours + " : " + minutes + " : " + seconds;
 
         if(distance <= 0){
-            if(localStorage.getItem("tracker") == "1"){
-                localStorage.clear();
-                localStorage.setItem("Bool", "false");
-                console.log("tracker working");
-                window.location.reload();
-                document.getElementById("player").src = "images/2018-fif-world-cup-thomas-mueller.jpg";
-
-            }
-            else {
-                localStorage.clear();
-                localStorage.setItem("Bool", "true");
-                window.location.reload();
-                document.getElementById("player").src = "images/3337539-68231048-2560-1440.jpg";
-                console.log("Midnight");
-            }
+            localStorage.clear();
+            localStorage.setItem("Bool", "true");
+            window.location.reload();
+            document.getElementById("player").src = "images/3337539-68231048-2560-1440.jpg";
+            console.log("Midnight");
          }
 
     }, 1000);
